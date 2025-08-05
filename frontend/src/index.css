@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  * {
+    box-sizing: border-box;
+    @apply transition-all duration-200 ease-in-out;
+  }
+
+  a {
+    @apply text-blue-600 dark:text-blue-400 hover:underline hover:text-blue-800 dark:hover:text-blue-300;
+    transition: color 0.2s ease;
+  }
+
+  button {
+    @apply focus:outline-none active:scale-95;
+    transition: all 0.2s ease;
+  }
+
+  /* Scrollbar Styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(100, 116, 139, 0.4); /* slate-500 with opacity */
+    border-radius: 4px;
+  }
+
+  /* Selection styling */
+  ::selection {
+    @apply bg-blue-500 text-white dark:bg-blue-400;
+  }
+
+  /* Test Debug */
+  .test-debug {
+    @apply text-red-500 font-semibold;
+  }
+}
